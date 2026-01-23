@@ -1,0 +1,34 @@
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff9933"/>
+      <stop offset="100%" stop-color="#138808"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background (transparent for logo use) -->
+  <rect width="100%" height="100%" fill="none"/>
+
+  <!-- Main Title -->
+  <text
+    x="300"
+    y="85"
+    text-anchor="middle"
+    font-size="64"
+    font-weight="700"
+    fill="url(#titleGradient)"
+    font-family="Noto Sans Devanagari, Mangal, Arial, sans-serif">
+    नमस्ते
+  </text>
+
+  <!-- Subtitle -->
+  <text
+    x="300"
+    y="135"
+    text-anchor="middle"
+    font-size="26"
+    fill="#333333"
+    font-family="Noto Sans Devanagari, Mangal, Arial, sans-serif">
+    चले आज मौसम देख लेते हैं
+  </text>
+</svg>
