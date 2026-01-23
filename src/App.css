@@ -1,0 +1,96 @@
+import './App.css'
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.8s ease;
+  position: relative;
+}
+
+.app-header h1 {
+  font-size: 1.6rem;
+  color: #ffcd3c;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.app-header h2 {
+  font-size: 1.3rem;
+  color: #ff6b6b;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 16px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ff5252;
+  transform: scale(1.05);
+}
+
+.logout-btn:active {
+  transform: scale(0.98);
+}
+
+.app-main {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  animation: pulse 1.5s ease infinite;
+}
+
+.error {
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid #ff6b6b;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: #ffd700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}

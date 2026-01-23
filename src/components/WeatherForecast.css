@@ -1,0 +1,149 @@
+.weather-forecast {
+  width: 100%;
+  animation: slideUp 0.6s ease;
+}
+
+.day-block {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.6s ease forwards;
+  transition: all 0.3s ease;
+}
+
+.day-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.day-block.rainy {
+  border: 2px solid #00e0ff;
+  background: rgba(0, 224, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
+}
+
+.date-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffcd3c;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.hour-card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  animation: fadeSlideUp 0.5s ease forwards;
+}
+
+.hour-card:hover {
+  background: rgba(255, 255, 255, 0.13);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 224, 255, 0.2);
+}
+
+.hour-card .time {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #00e0ff;
+  margin-bottom: 0.5rem;
+}
+
+.hour-card .icon {
+  height: 40px;
+  width: 40px;
+  margin: 0.5rem 0;
+}
+
+.hour-card .rain {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.refresh-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #00e0ff, #00a8cc);
+  color: #0f2027;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 224, 255, 0.3);
+}
+
+.refresh-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 224, 255, 0.5);
+}
+
+.refresh-btn:active {
+  transform: scale(0.98);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .day-block {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .forecast-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .date-title {
+    font-size: 1rem;
+  }
+}
